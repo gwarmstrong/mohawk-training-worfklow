@@ -34,7 +34,7 @@ rule train_task:
         directory('{log_dir}min-red_{red}__n_{n}__group_{group}__lr_{lr}__arch_{arch}')
     run:
         from mohawk.trainer import train_helper as mohawk_cli
-        train_args = {'lr': wildcards.lr,
+        train_args = {'lr': params.lr,
                       'epochs': 10,
                       'log_dir': str(output),
                       'data_dir': 'data',
