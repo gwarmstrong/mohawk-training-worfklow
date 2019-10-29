@@ -28,7 +28,7 @@ rule train_task:
         train_args = {'lr': 0.001, #params.lr,
                       'epochs': 10,
                       'log_dir': str(output),
-                      'data_dir': '.',
+                      'data_dir': 'data',
                       'train_ratio': 0.8,
                       'seed': 0,
                       'gpu': False,
